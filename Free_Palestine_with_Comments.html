@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Palestine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .comment-section {
+            margin-top: 30px;
+        }
+        .comment-section form {
+            margin-bottom: 20px;
+        }
+        .comment-section input, .comment-section textarea {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .comment-section button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment-section .comments {
+            margin-top: 20px;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .comment-section .comments p {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Free Palestine</h1>
+    </header>
+    <main>
+        <p>Supporting the freedom and rights of the Palestinian people.</p>
+        <div class="images">
+          
+            <img src="https://ih1.redbubble.net/image.1866029565.3330/raf,360x360,075,t,fafafa:ca443f4786.u3.jpg" alt="Freedom for Palestine" width="100" >
+        </div>
+        <div class="comment-section">
+            <h2>Leave Your Comment</h2>
+            <form id="commentForm">
+                <input type="text" id="username" placeholder="Your Name" required>
+                <textarea id="comment" placeholder="Your Comment" rows="4" required></textarea>
+                <button type="button" onclick="addComment()">Submit</button>
+            </form>
+            <div class="comments" id="commentsContainer">
+                <!-- User comments will appear here -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Support Palestine Initiative</p>
+    </footer>
+    <script>
+        function addComment() {
+            const username = document.getElementById('username').value;
+            const comment = document.getElementById('comment').value;
+            if (username && comment) {
+                const commentContainer = document.getElementById('commentsContainer');
+                const commentElement = document.createElement('p');
+                commentElement.textContent = `${username}: ${comment}`;
+                commentContainer.appendChild(commentElement);
+                document.getElementById('commentForm').reset();
+            } else {
+                alert('Please fill out both fields before submitting.');
+            }
+        }
+    </script>
+</body>
+</html>
